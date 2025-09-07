@@ -1,4 +1,6 @@
 requests==2.31.0
+matplotlib==3.7.2
+numpy==1.24.3
 
 # SQLite comes with Python, but we might want some helpers
 # Actually, let's keep it simple and just use built-in sqlite3
