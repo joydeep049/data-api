@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import os
 import csv
+import sys
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'CSV-Import'))
+
 from csv_import import CSVImporter
 
 def create_test_csv():
