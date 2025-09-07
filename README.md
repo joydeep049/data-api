@@ -25,6 +25,18 @@ Fetches student test scores, calculates statistics, and creates visualizations.
 4. Creates a text-based bar chart visualization
 5. Shows summary statistics
 
+## Project 3: CSV Data Import
+
+Reads CSV files and imports user data into SQLite database with validation.
+
+### What it does
+
+1. Reads CSV files with name and email columns
+2. Validates email format using regex
+3. Skips invalid emails and empty names
+4. Handles duplicate emails (skips duplicates)
+5. Stores valid records in SQLite database
+
 ## Setup
 
 ```bash
@@ -37,8 +49,10 @@ python3 Book-API/book_api.py
 # run the student scores script
 python3 StudentScore-API/student_scores_simple.py
 
-# test with mock data
-python3 StudentScore-API/test_student_scores.py
+# run the CSV import script
+cd CSV-Import
+python3 csv_import.py
+
 ```
 
 ## Features
@@ -56,6 +70,13 @@ python3 StudentScore-API/test_student_scores.py
 - Creates text-based bar chart visualization
 - Works without matplotlib (fallback version)
 - Mock data generation for testing
+
+### CSV Import Project
+- Reads CSV files with UTF-8 encoding
+- Email format validation using regex
+- Duplicate email handling (skips duplicates)
+- SQLite storage with proper schema
+- Error handling for invalid data
 
 ## Database Schema
 
@@ -84,6 +105,13 @@ CREATE TABLE books (
 - Small dataset, all processing in memory
 - Text-based visualization is sufficient (matplotlib optional)
 - Random score generation for demo purposes
+
+### CSV Import Project
+- CSV format has header row
+- File is UTF-8 encoded
+- Small dataset (<10k rows)
+- Email validation is basic regex check
+- Duplicate emails are skipped, not overwritten
 
 ## Code Style
 
